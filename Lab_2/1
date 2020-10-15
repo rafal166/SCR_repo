@@ -1,0 +1,9 @@
+$!/bin/bash
+
+jakidzisdzien=$(date +%u)
+
+if[ $jakidzisdzien -gt 5]; then
+	echo "Weekend";
+else 
+	echo "Dzien do roboty";
+	fi
