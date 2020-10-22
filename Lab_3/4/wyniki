@@ -1,0 +1,4 @@
+Gdy zamknalem ostatni piszacy proces to czytajace tez sie zamknely
+Gdy zamknalem czytajace to piszace tez juz nic nie mogl wyslac
+Polecenie:
+mknod /tmp/potok p

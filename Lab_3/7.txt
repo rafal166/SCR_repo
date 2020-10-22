@@ -1,0 +1,8 @@
+Wyswietlanie prcesow:
+ps -lp $(pgrep -u user skrypt)
+
+uruchamianie procesu z podwyszonym priorytetem:
+nice -n 20 ./skrypt.sh 
+
+obnianie priorytetu procesu:
+sudo renice -n -20 $(pgrep -u user skrypt)
