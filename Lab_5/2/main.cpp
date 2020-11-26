@@ -27,12 +27,12 @@ int main(int argc, char *argv[])
 	case 0:
 		// potomek
 		close(pipe_fds[1]); // zamykanie potoku do zapisu
-		int copy_stdio = dup(1);
-		while ((size = read(pipe_fds[0], inbuf,
-							BUFSIZ)) > 0) // czytanie z potoku do bufora
-		{
-			write(copy_stdio, inbuf, size);
-		}
+		close(0); // zamyka standardowe wejscie
+        dup(pipe_fds[0]); // kopiuje fd read z potoku
+        close(pipe_fds[0]); // zamyka fd read potoku
+
+		execlp("display", "display", "-", NULL); // uruchamia ImageMagic - NULL oznacza zrodlo jest stdout
+
 		break;
 	default:
 		//rodzic
