@@ -1,0 +1,7 @@
+Join czeka po kolei na wykonanie kolejnego watka ( zatrzymuje main i czeka). 
+Jak sie skoncza wszystkie to idzie dalej program
+
+####
+
+Detach mowi watka "Ja mam was gdzies, zyjcie swoim zyciem. Nie interesujecie mnie juz"
+I przechodzi dalej
